@@ -10,9 +10,12 @@ Black: #59554C;
 @charset "utf-8";
 @font-face {
     font-family: 'Montserrat';
-    src: url(../fonts/Montserrat/static/Montserrat-Regular.ttf) format(truetype), 
-    url(../fonts/Montserrat/static/Montserrat-Bold.ttf)  format(truetype),
-    url(../fonts/Montserrat/static/Montserrat-Light.ttf)  format(truetype);
+    src: url(../assets/fonts/Montserrat/static/Montserrat-Medium.ttf) format(truetype), 
+    url(..//assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf)  format(truetype),
+    url(../assets/fonts/Montserrat/static/Montserrat-Light.ttf)  format(truetype),
+    url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf)  format(truetype),
+    url(../assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf)  format(truetype);
+
     font-weight: normal;
     font-style: normal;
 }
@@ -44,15 +47,15 @@ Black: #59554C;
     z-index: 1;
 }
 .nav__itens {
-    padding: 3vh 0;
     margin-right: 2.5%;
 }
  .nav__itens p {
     font-family: Montserrat;
     font-weight: normal;
     outline: none;
+    padding: 2.5vh 0;
 }
-.nav__itens p:hover {
+.nav__links p:hover {
     color: rgb(252, 161, 58);
     transition: .2s;
     transform: scale(102%);
@@ -77,9 +80,27 @@ Black: #59554C;
 }
 
 
-
-
-
 #banner {
     width: 100%;
+}
+
+.projetos__container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.projetos {
+    background-image: url(../assets/img/construct.png);
+    width: fit-content;
+    height: auto;
+    background: no-repeat
+}
+.projetos img {
+    width: 300px;
+    height: auto;
+    background: no-repeat;
 }
