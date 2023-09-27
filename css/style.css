@@ -19,9 +19,16 @@ Black: #59554C;
     font-weight: normal;
     font-style: normal;
 }
-* {
+body {
+    font-family: Montserrat;
+    font-weight: normal;
     box-sizing: border-box;
     margin: 0;
+    outline: none;
+}
+* {
+    transition:ease-in .2s;
+
 }
 
 
@@ -39,8 +46,6 @@ Black: #59554C;
 .active{
     background-color: transparent;
     border-bottom: 1px solid rgb(0, 0, 0);
-    font-family: Montserrat;
-    font-weight: normal;
     position: fixed;
     margin-right: 5%;
     color: #f1f1f1;
@@ -50,9 +55,6 @@ Black: #59554C;
     margin-right: 2.5%;
 }
  .nav__itens p {
-    font-family: Montserrat;
-    font-weight: normal;
-    outline: none;
     padding: 2.5vh 0;
 }
 .nav__links p:hover {
@@ -79,28 +81,86 @@ Black: #59554C;
     padding: 20px 0;
 }
 
-
-#banner {
+.banner__container {
+    background-color: #798C8C;
     width: 100%;
+    height: 100vh;
 }
 
 .projetos__container {
+    background-color: #ced3b1;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .projetos {
-    background-image: url(../assets/img/construct.png);
-    width: fit-content;
-    height: auto;
-    background: no-repeat
-}
-.projetos img {
-    width: 300px;
-    height: auto;
+    background-image: url('../assets/img/construct.png') !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
     background: no-repeat;
+    transition: ease-in .2s;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.projetos a {
+    text-align: center;
+    width: 400px;
+    display: block;
+ 
+    position: relative;
+}
+.projetos a:after {
+    content: 'oi';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition: ease-in .2s;
+
+    background: linear-gradient(180deg,rgba(26, 25, 25, 0.7) 30%,transparent 80%);
+    
+     
+}
+.projetos a:hover:after {
+    opacity: 1;
+    transition: ease-in .2s;
+}
+
+
+
+
+
+
+.rodape__container {
+    background-color: #798C8C;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+.img--posicao {
+    width: 2%;
+}
+.img--posicao:hover {
+    background-color: bisque;
+    size: 75px;
+    transition: .2s;
+}
+.titulo__icones--posicao {
+    margin-bottom: 1%;
+}
+.social__container {
+    position: relative;
+    
 }
