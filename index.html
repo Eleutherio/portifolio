@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/icon1.svg" type="image/x-icon">
     <title>Portifólio - Guilherme</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -10,12 +11,13 @@
 </head>
 <body>
     <header class="header">
-        <nav>
-            <ul class="nav__menu__container">
+        <img src="./assets/img/icon1.svg" class="img__header">
+        <nav class="nav--position">
+            <ol class="nav__menu__container">
                 <li class="nav__itens"><a class="nav__links" href="#"><p>Sobre mim</p></a></li>
                 <li class="nav__itens"><a class="nav__links" href="#"><p>Projetos</p></a></li>
                 <li class="nav__itens"><a class="nav__links" href="#"><p>Contate-me</p></a></li>
-            </ul>
+            </ol>
         </nav>
     </header>
     <main>
@@ -30,19 +32,20 @@
             </div>
         </section>
         <section class="projetos__container">
-            <div class="projetos"><a href="#"></a></div>
-            <div class="projetos"><a href="#"></a></div>
-            <div class="projetos"><a href="#"></a></div>
+            <div class="projetos"><a href="https://abriuchaveiro.vercel.app/"><p class="content--projetos">Abriu Chaveiro</p></a></div>
+            <div class="projetos"><a href="#"><p class="content--projetos">Em Construção...</p></a></div>
+            <div class="projetos"><a href="#"><p class="content--projetos">Em Construção...</p></a></div>
         </section>
     </main>
     <footer class="rodape__container">
-        <div class="social__container">
-            <p class="titulo__icones--posicao">Redes Sociais</p>
-            <img src="./assets/img/linkedin.png"  class="img--posicao" alt="icone linked in">
-            <img src="./assets/img/github.png"  class="img--posicao" alt="">
-            <img src="./assets/img/5279123_tweet_twitter_twitter logo_icon.svg"  class="img--posicao" alt="">
+        <div class="flex__container">
+          <p class="titulo__icones--posicao">Redes Sociais:</p>
+          <div class="img--wrapper">
+            <a href="#"><object data="./assets/img/linkedin.svg" type="image/svg+xml" class="img--posicao" alt="icone linked in"></object></a>
+            <a href="#"><object data="./assets/img/twitter.svg" type="image/svg+xml" class="img--posicao" alt=""></object></a>
+            <a href="#"><object data="./assets/img/⁫git.svg" type="image/svg+xml" class="img--posicao" alt=""></object></a>
+          </div>
         </div>
     </footer>
-    
 </body>
 </html>
