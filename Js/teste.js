@@ -17,11 +17,16 @@ var projetos = document.getElementsByClassName("projetos");
 
 Array.from(projetos).forEach(function(elemento) {
   elemento.addEventListener("mouseover", function() {
-    this.querySelector(".content--projetos").classList.add("content--active");
+    this.querySelector(".legenda___projetos").classList.add("content--active");
+    this.querySelector(".legenda___projetos:nth-child(odd)").classList.add("content--active");
+    this.querySelector(".projeto--img").classList.add("projeto--img--active");
   });
 
   elemento.addEventListener("mouseout", function() {
-    this.querySelector(".content--projetos").classList.remove("content--active");
+    this.querySelector(".legenda___projetos").classList.remove("content--active");
+    this.querySelector(".legenda___projetos:nth-child(odd)").classList.remove("content--active");
+    this.querySelector(".projeto--img").classList.remove("projeto--img--active");
+
   });
 });
 

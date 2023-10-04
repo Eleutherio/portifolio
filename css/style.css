@@ -27,7 +27,9 @@ body {
     outline: none;
 }
 * {
-    transition:ease-in .3s;
+    scroll-behavior: smooth;
+    transition: ease-in .3s;
+
 }
 /* --------------- */
 .header {
@@ -37,6 +39,7 @@ body {
     position: fixed;
     backdrop-filter: blur(5px);
     display: flex;
+    z-index: 1;
 }
 .active {
     background-color: transparent;
@@ -44,7 +47,7 @@ body {
 }
 .img__header{
     padding-left: 10%;
-    width: 8%;
+    width: 6em;
 }
 .nav--position {
     width: 100%;
@@ -58,7 +61,7 @@ body {
     justify-content: end;
     align-items: center;
     list-style: none;
-    padding: 2%;
+    padding: 0 2%;
     width: 100%;
 }
 .nav__itens {
@@ -66,7 +69,6 @@ body {
 }
 .nav__itens p {
     font-size: 1vw;
-
 }
 .nav__links p:hover {
     color: #f8b263;
@@ -82,70 +84,71 @@ body {
 }
 
 /* --------------- */
-
-
-
 .banner__container {
     background-color: #798C8C;
     width: 100%;
     height: 100vh;
+    padding-top: 4%;
+    display: flex;
+}
+.banner--divisao-esquerda__container {
+    color: #59554C;
+    text-justify: distribute;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background-color: #F2EFDF;
+    font-size: 1.1em;
+    padding: 0 1%;
+    line-height: 3em;
+}
+.banner--divisao-direita__container {
+    width: 40%;
+    background-color: #59554C; 
 }
 /* --------------- */
 
 
 .projetos__container {
-    background-color: #D0D9D4;
+    background-color: #59554C;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    transition: ease-in .3s;
 }
-
 .projetos {
-    background-image: url('../assets/img/construcao.svg') !important;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #F2EFDF;
     width: 400px;
-    height: 300px;
+    height: 240px;
     margin-right: 2%;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    background: no-repeat;
-    transition: ease-in .3s;
-
     overflow: hidden;
-    background-color: #F2EFDF;
 }
-.projetos:nth-child(1) {
-    transition: ease-in .3s;
-
-    background-image: url(../assets/img/abriuchaveiro.png) !important;
-    background-position: center;
-    background-size: cover;
+.projeto--img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
 }
-.projetos:nth-child(1):hover{
-    transition: ease-in .3s;
-    background-size: 160%;
+.projeto--img--active{
+    transform: scale(1.03);
 }
-
-
 .projetos a {
-    transition: ease-in .3s;
-
-    text-align: center;
     width: 400px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: end;
+    flex-flow: column nowrap;
+    justify-content: end;
+    align-items: center;
     text-align: center;
     position: relative;
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 .projetos a:after {
     content: "";
@@ -156,44 +159,42 @@ body {
     bottom: 0px;
     color: #f1f1f1;
     opacity: 0;
+    background: linear-gradient(360deg,rgba(26, 25, 25, 0.93) 40%,transparent 100%);  
     transition: ease-in .3s;
-    background: linear-gradient(360deg,rgba(26, 25, 25, 0.7) 30%,transparent 80%);  
-}
-.projetos a:after::content{
-    margin: 20px 4px;
 }
 .projetos a:hover:after {
     opacity: 1;
     transition: ease-in .3s;
-    transform: scale(2px);
+
 }
-.content--projetos{
+.legenda___projetos {
+    font-size: 1.1em;
+    font-weight: bold;
     text-decoration: none;
-    transition: ease-in .3s;
     z-index: 1;
     color: white;
     display: none;
-    border: 1px solid white;
     margin-bottom: 5%;
     padding: 10px 15px;
-    border-radius: 10px;
     width: fit-content;
-    height: fit-content;
-
-    text-align: center;
+    height: fit-content;  
 }
-.content--active{
-    transition: ease-in .3s;
+.legenda___projetos:nth-child(odd){
+    font-size: 0.8em;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-weight: normal;
+}
+.content--active {
     display: block;
 }
-
 /* --------------- */
 
 
 
 /* --------------- */
 .rodape__container {
-    background-color: #59554C;
+    background: linear-gradient(40deg, #AEBFBE, #798C8C 40%);
     width: 100%;
     padding: 5% 0;
     display: flex;
@@ -201,19 +202,23 @@ body {
     align-items: center;
 }
 .flex__container {
-    width: 10%;
+    width: 20%;
     padding-right: 5%;
     display: flex;
     flex-flow: column;
     text-align: center;
+    justify-content: center;
 }
 .img--posicao {
     box-sizing: border-box;
-    width: 20%;
+    width: 2em;
 }
 .titulo__icones--posicao {
     font-size: 1.1em;
     line-height: 2.5em;
     color: #ced3b1;
+}
+.rodape__container p {
+    color: #fefefe;
 }
 /* --------------- */
