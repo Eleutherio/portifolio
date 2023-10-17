@@ -11,42 +11,43 @@
 </head>
 <body>
     <header class="header">
-        <img src="./assets/img/icon1.svg" class="img__header">
+        <img src="./assets/img/icon.svg" class="img__header">
         <nav class="nav--position">
-            <ol class="nav__menu__container">
-                <li class="nav__itens"><a class="nav__links" href="#"><p>Sobre mim</p></a></li>
-                <li class="nav__itens"><a class="nav__links" href="#nav--projetos"><p>Projetos</p></a></li>
-                <li class="nav__itens"><a class="nav__links" href="#"><p>Contate-me</p></a></li>
+            <ol class="nav__menu__container">     
+                <li class="nav__itens"><a class="nav__links" href="#"><p class="nav__itens--fonte">Sobre mim</p></a></li>
+                <li class="nav__itens"><a class="nav__links" href="#nav--projetos"><p class="nav__itens--fonte">Projetos</p></a></li>
+                <li class="nav__itens"><a class="nav__links" href="#"><p class="nav__itens--fonte">Contate-me</p></a></li>
             </ol>
         </nav>
     </header>
     <main>
-        <section class="banner__container">
-            <div class="banner--divisao-esquerda__container">
-                <h1>Desenvolvo soluções inclusivas e modernas para seu produto digital.</h1>
-                <h2>Web sites com design criativo e profissional que vão destacar a presença online do seu negócio.</h2>
-                <a href="#sobre">Saiba mais</a>
-            </div>
-            <div class="banner--divisao-direita__container">
-                <p>Avaliações</p>
+        <section class="inicio__container">
+            <span class="fade--efeito"></span>
+            <img src="./assets/img/mundo.png" class='banner-inicio' alt="">
+            <div class="inicio__conteudo">
+                <h1>Olá! seja bem vindo(a).</h1>
+                <h2>Me chamo Guilherme</h2>
+                <h3>Desenvolvo soluções inclusivas e modernas para seu produto digital.</h3>
+                <a href="#sobre"><img src="./assets/img/icons8-box-move-down-64.png" class="banner__avancar__pag" alt=""></a>
             </div>
         </section>
 
-        <section class="Sobre-mim__container">
+        <section class="Sobre-mim__container secoes--definicao" id="sobre">
+            <div>
             <h1>Guilherme F. Eleuthério</h1>
             <h2>Desenvolvedor Front-end & UI Designer</h2>
             <h3>Meu nome é Guilherme Ferreira Eleuthério, ou “Guifer”
                  (marca que costumo utilizar) sou aprendiz autodidata e apaixonado pelo Desenvolvimento Front-end. Atualmente 
                  desenvolvo trabalhos como freelancer e voluntariado. Desenvolvo interfaces inclusivas em conformidade com a LGPD, concentrado em performance,
-                 animações, responsividade e SEO.</h3>
+                 animações, responsividade e SEO.</h3>  
+            </div>
+
         </section>
 
-        <section class="projetos__container" id="nav--projetos">
-
+        <section class="projetos__container secoes--definicao" id="nav--projetos">
                 <div class="projetos"><a href="https://abriuchaveiro.vercel.app/"><img src="./assets/img/abriuchaveiro.png" alt="" class="projeto--img"><p class="legenda___projetos">Abriu Chaveiro</p><p class="legenda___projetos">Web Site</p></a></div>
                 <div class="projetos"><a href="#"><img src="./assets/img/construcao.svg" alt="" class="projeto--img"><p class="legenda___projetos">Em Construção...</p></a></div>
                 <div class="projetos"><a href="#"><img src="./assets/img/construcao.svg" alt="" class="projeto--img"><p class="legenda___projetos">Em Construção...</p></a></div>
-            
     </section>
     </main>
     <footer class="rodape__container">
