@@ -10,23 +10,18 @@ Black: #59554C;
 @charset "utf-8";
 @font-face {
     font-family: 'Montserrat';
-    src: url(../assets/fonts/Montserrat/static/Montserrat-Medium.ttf) format(truetype), 
-    url(..//assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf)  format(truetype),
-    url(../assets/fonts/Montserrat/static/Montserrat-Light.ttf)  format(truetype),
-    url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf)  format(truetype),
-    url(../assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf)  format(truetype);
-
-    font-weight:normal;
+    src: url(../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format(truetype);
+    font-weight: 100 900;
     font-style: normal;
-    font-size: 1rem;
 }
 body {
-    font-family: Montserrat;
-    font-weight: normal;
+    font-family: Montserrat, sans-serif;
+    font-weight: 100;
+    font-style: normal;
     box-sizing: border-box;
     margin: 0;
     outline: none;
-    font-size: 1rem;
+    font-size: rem;
 }
 * {
     scroll-behavior: smooth;
@@ -53,10 +48,10 @@ body {
 .nav--position {
     width: 100%;
 }
-.img__header{
+/* .img__header {
     padding-left: 10%;
     width: 5em;
-}
+} */
 .nav__menu__container {
     position: relative;
     display: flex;
@@ -64,6 +59,7 @@ body {
     justify-content: end;
     align-items: center;
     list-style: none;
+    padding: 0% 1%;
 }
 .nav__itens {
     height: 3.3em;
@@ -73,6 +69,7 @@ body {
 }
 .nav__itens--fonte {
     color: #E6F5FF;
+    font-weight: 300;
 }
 .nav__itens--fonte--ativo {
     color: #E6F5FF;
@@ -101,7 +98,6 @@ body {
 }
 .inicio__container {
     display: flex;
-    background: linear-gradient(#1C71A6 20%, #d4d5d6b6 80%);
     z-index: 0;
     transition: ease-in 1s;
     }
@@ -110,27 +106,14 @@ body {
         width: 100%;
         height: 100vh;
         z-index: -1;
-        animation: ceu 9s infinite;
-        background:linear-gradient( #fefefe00, #fefefe 80%);
-        filter: blur(5px);
+        background: linear-gradient(to bottom, #575757, #AEBFBE);
     }
-    @keyframes ceu {
-        0% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-        
-    }
+
 
 .Sobre-mim__container {
     display: flex;
-    flex-flow: row;
-    justify-content: center;
+    flex-flow: column;
+    justify-content: left;
     align-items: center;
     background-color: #F2F0F1;
 }
@@ -156,20 +139,23 @@ body {
 }
 .inicio__conteudo {
     color: #fefefe;
-    text-justify: flex;
-    text-align: center;
+    text-align: left;
+    font-weight: 200;
+    font-size: 1.5em;
     display: absolute;
     flex-flow: column;
     justify-content: center;
     width: 100%;
     height: fit-content;
     margin-top: 7%;
-    padding: 1%;
-    font-size: 1.5rem;
-    line-height: 3em;
+    padding: 5%;
     opacity: 0;
     animation: fadeIn 2.5s forwards;
     position: absolute;
+}
+h1 {
+    line-height: 1.5;
+    font-size: 2.5rem;
 }
 @keyframes fadeIn {
             from {
